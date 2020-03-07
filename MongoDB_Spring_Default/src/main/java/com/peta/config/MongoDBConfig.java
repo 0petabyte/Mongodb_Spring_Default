@@ -16,7 +16,6 @@ public class MongoDBConfig {
 	
 	public @Bean MongoClient mongoClient() {
 		final String combineUrl = "mongodb://id:pass@localhost:26016/?authSource=admin";
-		//final String combineUrl = "mongodb://peta:Wkdvnd1004@localhost:26016/?authSource=admin";
 		ConnectionString connString = new ConnectionString(combineUrl);
 		MongoClientSettings settings = MongoClientSettings.builder().applyConnectionString(connString).retryWrites(true)
 				.build();
